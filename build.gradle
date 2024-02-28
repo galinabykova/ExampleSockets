@@ -20,6 +20,12 @@ test {
     useJUnitPlatform()
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
 jacocoTestReport {
     reports {
         xml.required = true
