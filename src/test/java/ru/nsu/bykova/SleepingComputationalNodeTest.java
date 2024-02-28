@@ -28,44 +28,44 @@ class SleepingComputationalNodeTest {
 
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 3, 5, 10})
-    void notTaskTest(int nThreads) {
+    void notTaskTest(int threadCount) {
         TestSleepingBoss testSleepingBoss = new TestSleepingBoss(new ConcurrentLinkedQueue<>());
         SleepingComputationalNode sleepingComputationalNode = new SleepingComputationalNode();
-        sleepingComputationalNode.calculate(nThreads, testSleepingBoss);
+        sleepingComputationalNode.calculate(threadCount, testSleepingBoss);
     }
 
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 3, 5, 10})
-    void oneTaskTest(int nThreads) {
+    void oneTaskTest(int threadCount) {
         var queue = new ConcurrentLinkedQueue<TestSleepingTask>();
         queue.add(new TestSleepingTask(0, new int[] {0}, false));
         TestSleepingBoss testSleepingBoss = new TestSleepingBoss(queue);
         SleepingComputationalNode sleepingComputationalNode = new SleepingComputationalNode();
-        sleepingComputationalNode.calculate(nThreads, testSleepingBoss);
+        sleepingComputationalNode.calculate(threadCount, testSleepingBoss);
     }
 
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 3, 5, 10})
-    void smallArrayTaskTest(int nThreads) {
+    void smallArrayTaskTest(int threadCount) {
         var queue = new ConcurrentLinkedQueue<TestSleepingTask>();
         queue.add(new TestSleepingTask(0, new int[] {0}, false));
         queue.add(new TestSleepingTask(0, new int[] {0, 1}, false));
         queue.add(new TestSleepingTask(0, new int[] {0, 1, 2}, false));
         TestSleepingBoss testSleepingBoss = new TestSleepingBoss(queue);
         SleepingComputationalNode sleepingComputationalNode = new SleepingComputationalNode();
-        sleepingComputationalNode.calculate(nThreads, testSleepingBoss);
+        sleepingComputationalNode.calculate(threadCount, testSleepingBoss);
     }
 
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 3, 5, 10})
-    void bigArrayTaskTest(int nThreads) {
+    void bigArrayTaskTest(int threadCount) {
         var queue = new ConcurrentLinkedQueue<TestSleepingTask>();
         queue.add(new TestSleepingTask(0, new int[] {0, 0, 0, 0, 0, 0, 0}, true));
         queue.add(new TestSleepingTask(0, new int[] {0, 0, 0, 0, 0, 0, 0, 1}, true));
         queue.add(new TestSleepingTask(0, new int[] {0, 0, 0, 0, 0, 0, 0, 1, 2}, true));
         TestSleepingBoss testSleepingBoss = new TestSleepingBoss(queue);
         SleepingComputationalNode sleepingComputationalNode = new SleepingComputationalNode();
-        sleepingComputationalNode.calculate(nThreads, testSleepingBoss);
+        sleepingComputationalNode.calculate(threadCount, testSleepingBoss);
     }
 
     class TestSleepingTask extends SleepingTask implements SleepingCourier {

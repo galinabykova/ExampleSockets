@@ -13,7 +13,7 @@ public class UdpSleepingBoss implements SleepingBoss {
     // мы не будет думать о том, что будет, если объект не влезет в один пакет
     // потому что вы можете организовать код так, чтобы вам не надо было
     // об этом думать
-    final int PACKET_LIMIT = 65507;
+    final static int PACKET_LIMIT = 65507;
     final ObjectMapper mapper;
     DatagramSocket datagramSocket;
 
