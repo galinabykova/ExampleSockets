@@ -3,8 +3,9 @@ package ru.nsu.bykova.tcp;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ru.nsu.bykova.data.SleepingResult;
+
 import ru.nsu.bykova.SleepingCourier;
+import ru.nsu.bykova.data.SleepingResult;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -12,8 +13,8 @@ import java.io.OutputStreamWriter;
 import java.net.Socket;
 
 public class TcpSleepingCourier implements SleepingCourier {
-    Socket clientSocket;
     private final ObjectMapper mapper;
+    Socket clientSocket;
 
     public TcpSleepingCourier(Socket socket) {
         clientSocket = socket;

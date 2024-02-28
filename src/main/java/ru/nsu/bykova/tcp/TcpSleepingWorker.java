@@ -3,14 +3,14 @@ package ru.nsu.bykova.tcp;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import ru.nsu.bykova.SleepingWorker;
 import ru.nsu.bykova.data.SleepingResult;
 import ru.nsu.bykova.data.SleepingTask;
-import ru.nsu.bykova.SleepingWorker;
 
 import java.io.*;
 import java.net.ConnectException;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 public class TcpSleepingWorker implements SleepingWorker {
     String address;

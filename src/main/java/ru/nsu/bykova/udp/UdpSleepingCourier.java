@@ -12,9 +12,9 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 
 public class UdpSleepingCourier implements SleepingCourier {
+    final ObjectMapper mapper;
     InetAddress address;
     int port;
-    final ObjectMapper mapper;
 
     public UdpSleepingCourier(InetAddress address, int port) {
         this.address = address;
@@ -23,12 +23,17 @@ public class UdpSleepingCourier implements SleepingCourier {
         mapper.configure(JsonGenerator.Feature.AUTO_CLOSE_TARGET, false);
         mapper.configure(JsonParser.Feature.AUTO_CLOSE_SOURCE, false);
     }
+
     @Override
     public void SendResult(SleepingResult sleepingResult) {
         try (DatagramSocket datagramSocketResult = new DatagramSocket()) {
             var bytes = mapper.writeValueAsBytes(sleepingResult);
-            DatagramPacket packet = new DatagramPacket(bytes, bytes.length,
-                    InetAddress.getByAddress(address.getAddress()), port);
+            DatagramPacket packet =
+                    new DatagramPacket(
+                            bytes,
+                            bytes.length,
+                            InetAddress.getByAddress(address.getAddress()),
+                            port);
             datagramSocketResult.send(packet);
         } catch (IOException e) {
         }

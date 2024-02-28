@@ -16,11 +16,12 @@ public class SleepingComputationalNode {
         Optional<SleepingBoss.Package> lastTask = sleepingBoss.getSleepingTask();
         while (lastTask.isPresent()) {
             final Optional<SleepingBoss.Package> currentTask = lastTask;
-            service.submit(() -> {
-                TrueSleepingWorker sleepingWorker = new TrueSleepingWorker();
-                SleepingResult result = sleepingWorker.Work(currentTask.get().task());
-                currentTask.get().courier().SendResult(result);
-            });
+            service.submit(
+                    () -> {
+                        TrueSleepingWorker sleepingWorker = new TrueSleepingWorker();
+                        SleepingResult result = sleepingWorker.Work(currentTask.get().task());
+                        currentTask.get().courier().SendResult(result);
+                    });
             lastTask = sleepingBoss.getSleepingTask();
         }
         service.shutdown();

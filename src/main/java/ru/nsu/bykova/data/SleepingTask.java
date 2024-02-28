@@ -6,11 +6,9 @@ public class SleepingTask {
     public long sleepingTime;
     public int[] array;
 
-    public SleepingTask() {
-    }
+    public SleepingTask() {}
 
-    public SleepingTask(long sleepingTime, int[] array)
-            throws IllegalArgumentException {
+    public SleepingTask(long sleepingTime, int[] array) throws IllegalArgumentException {
         if (sleepingTime < 0) {
             throw new IllegalArgumentException("sleepingTime < 0");
         }

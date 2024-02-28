@@ -3,21 +3,21 @@ package ru.nsu.bykova.udp;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import ru.nsu.bykova.SleepingWorker;
 import ru.nsu.bykova.data.SleepingResult;
 import ru.nsu.bykova.data.SleepingTask;
-import ru.nsu.bykova.SleepingWorker;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketTimeoutException;
-import java.util.concurrent.TimeoutException;
 
 public class UdpSleepingWorker implements SleepingWorker {
+    final ObjectMapper mapper;
     String address;
     int port;
-    final ObjectMapper mapper;
 
 
     public UdpSleepingWorker(String address, int port) throws IOException {

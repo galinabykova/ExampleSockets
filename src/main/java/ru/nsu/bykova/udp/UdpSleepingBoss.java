@@ -3,6 +3,7 @@ package ru.nsu.bykova.udp;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import ru.nsu.bykova.SleepingBoss;
 import ru.nsu.bykova.data.SleepingTask;
 
@@ -15,8 +16,8 @@ public class UdpSleepingBoss implements SleepingBoss {
     // потому что вы можете организовать код так, чтобы вам не надо было
     // об этом думать
     final int PACKET_LIMIT = 65507;
-    DatagramSocket datagramSocket;
     final ObjectMapper mapper;
+    DatagramSocket datagramSocket;
 
     public UdpSleepingBoss(int port) throws IOException {
         datagramSocket = new DatagramSocket(port);
