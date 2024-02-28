@@ -1,10 +1,10 @@
 package ru.nsu.bykova;
 
-import ru.nsu.bykova.data.SleepingResult;
 import java.util.Optional;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import ru.nsu.bykova.data.SleepingResult;
 
 public class SleepingComputationalNode {
     public void calculate(int nThreads, SleepingBoss sleepingBoss) {

@@ -8,8 +8,8 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Optional;
-import ru.nsu.bykova.SleepingBoss;
 import ru.nsu.bykova.data.SleepingTask;
+import ru.nsu.bykova.SleepingBoss;
 
 public class TcpSleepingBoss implements SleepingBoss {
     private final ServerSocket serverSocket;
