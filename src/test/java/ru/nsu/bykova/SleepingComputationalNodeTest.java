@@ -77,7 +77,7 @@ class SleepingComputationalNodeTest {
         }
 
         @Override
-        public void SendResult(SleepingResult sleepingResult) {
+        public void sendResult(SleepingResult sleepingResult) {
             Assertions.assertEquals(expectedResult, sleepingResult.result);
         }
     }

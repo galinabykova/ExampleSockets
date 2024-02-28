@@ -24,7 +24,7 @@ public class UdpSleepingCourier implements SleepingCourier {
     }
 
     @Override
-    public void SendResult(SleepingResult sleepingResult) {
+    public void sendResult(SleepingResult sleepingResult) {
         try (DatagramSocket datagramSocketResult = new DatagramSocket()) {
             var bytes = mapper.writeValueAsBytes(sleepingResult);
             DatagramPacket packet =

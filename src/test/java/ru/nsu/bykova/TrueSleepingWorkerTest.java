@@ -17,27 +17,27 @@ class TrueSleepingWorkerTest {
     void smallArrayTest() {
         int[] smallArray = new int[] {0, 1, 2};
         SleepingTask sleepingTask = new SleepingTask(1, smallArray);
-        Assertions.assertFalse(trueSleepingWorker.Work(sleepingTask).result);
+        Assertions.assertFalse(trueSleepingWorker.work(sleepingTask).result);
     }
 
     @Test
     void bigArrayTest() {
         int[] bigArray = new int[] {0, 1, 2, 3, 4, 5, 6};
         SleepingTask sleepingTask = new SleepingTask(1, bigArray);
-        Assertions.assertTrue(trueSleepingWorker.Work(sleepingTask).result);
+        Assertions.assertTrue(trueSleepingWorker.work(sleepingTask).result);
     }
 
     @Test
     void emptyArrayTest() {
         int[] emptyArray = new int[] {};
         SleepingTask sleepingTask = new SleepingTask(1, emptyArray);
-        Assertions.assertFalse(trueSleepingWorker.Work(sleepingTask).result);
+        Assertions.assertFalse(trueSleepingWorker.work(sleepingTask).result);
     }
 
     @Test
     void zeroSleepingTimeTest() {
         int[] array = new int[] {0, 1, 2};
         SleepingTask sleepingTask = new SleepingTask(0, array);
-        Assertions.assertFalse(trueSleepingWorker.Work(sleepingTask).result);
+        Assertions.assertFalse(trueSleepingWorker.work(sleepingTask).result);
     }
 }

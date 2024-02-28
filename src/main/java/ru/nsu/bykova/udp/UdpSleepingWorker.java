@@ -26,7 +26,7 @@ public class UdpSleepingWorker implements SleepingWorker {
     }
 
     @Override
-    public SleepingResult Work(SleepingTask sleepingTask) throws IOException {
+    public SleepingResult work(SleepingTask sleepingTask) throws IOException {
         try (DatagramSocket datagramSocket = new DatagramSocket()) {
             datagramSocket.setSoTimeout(10000);
             var bytes = mapper.writeValueAsBytes(sleepingTask);

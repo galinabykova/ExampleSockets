@@ -24,7 +24,7 @@ public class TcpSleepingWorker implements SleepingWorker {
     }
 
     @Override
-    public SleepingResult Work(SleepingTask sleepingTask) throws IOException {
+    public SleepingResult work(SleepingTask sleepingTask) throws IOException {
         try (var clientSocket = new Socket(address, port)) {
             BufferedWriter out =
                     new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));

@@ -22,7 +22,7 @@ public class TcpSleepingCourier implements SleepingCourier {
     }
 
     @Override
-    public void SendResult(SleepingResult result) {
+    public void sendResult(SleepingResult result) {
         try {
             var out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
             mapper.writeValue(out, result);

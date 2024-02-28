@@ -5,5 +5,5 @@ import ru.nsu.bykova.data.SleepingResult;
 import ru.nsu.bykova.data.SleepingTask;
 
 public interface SleepingWorker {
-    SleepingResult Work(SleepingTask sleepingTask) throws IOException;
+    SleepingResult work(SleepingTask sleepingTask) throws IOException;
 }

@@ -18,8 +18,8 @@ public class SleepingComputationalNode {
             service.submit(
                     () -> {
                         TrueSleepingWorker sleepingWorker = new TrueSleepingWorker();
-                        SleepingResult result = sleepingWorker.Work(currentTask.get().task());
-                        currentTask.get().courier().SendResult(result);
+                        SleepingResult result = sleepingWorker.work(currentTask.get().task());
+                        currentTask.get().courier().sendResult(result);
                     });
             lastTask = sleepingBoss.getSleepingTask();
         }

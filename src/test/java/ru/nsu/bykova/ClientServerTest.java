@@ -38,7 +38,7 @@ class ClientServerTest {
                                 (new SleepingComputationalNode()).calculate(1, boss);
                             });
             serverThread.start();
-            SleepingResult result = worker.Work(new SleepingTask(1, new int[] {0}));
+            SleepingResult result = worker.work(new SleepingTask(1, new int[] {0}));
             Assertions.assertFalse(result.result);
             boss.close();
             serverThread.join();
@@ -58,7 +58,7 @@ class ClientServerTest {
                             });
             serverThread.start();
             SleepingResult result =
-                    worker.Work(new SleepingTask(1, new int[] {0, 1, 2, 3, 4, 5, 6, 7}));
+                    worker.work(new SleepingTask(1, new int[] {0, 1, 2, 3, 4, 5, 6, 7}));
             Assertions.assertTrue(result.result);
             boss.close();
             serverThread.join();
@@ -81,7 +81,7 @@ class ClientServerTest {
             serverThread.start();
             for (int i = 0; i < taskCount; ++i) {
                 SleepingResult result =
-                        worker.Work(new SleepingTask(100, new int[] {0, 1, 2, 3, 4, 5, 6, 7}));
+                        worker.work(new SleepingTask(100, new int[] {0, 1, 2, 3, 4, 5, 6, 7}));
                 Assertions.assertTrue(result.result);
             }
             boss.close();
@@ -112,7 +112,7 @@ class ClientServerTest {
                                 () -> {
                                     try {
                                         SleepingResult result =
-                                                worker.Work(
+                                                worker.work(
                                                         new SleepingTask(
                                                                 100,
                                                                 new int[] {
@@ -143,6 +143,6 @@ class ClientServerTest {
     @MethodSource("provideArgumentsOnlyWorker")
     void notServerTest(SleepingWorker worker) {
         Assertions.assertThrows(
-                IOException.class, () -> worker.Work(new SleepingTask(1, new int[] {0})));
+                IOException.class, () -> worker.work(new SleepingTask(1, new int[] {0})));
     }
 }
