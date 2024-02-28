@@ -1,0 +1,36 @@
+package ru.nsu.bykova.udp;
+
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import ru.nsu.bykova.data.SleepingResult;
+import ru.nsu.bykova.SleepingCourier;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+
+public class UdpSleepingCourier implements SleepingCourier {
+    InetAddress address;
+    int port;
+    final ObjectMapper mapper;
+
+    public UdpSleepingCourier(InetAddress address, int port) {
+        this.address = address;
+        this.port = port;
+        mapper = new ObjectMapper();
+        mapper.configure(JsonGenerator.Feature.AUTO_CLOSE_TARGET, false);
+        mapper.configure(JsonParser.Feature.AUTO_CLOSE_SOURCE, false);
+    }
+    @Override
+    public void SendResult(SleepingResult sleepingResult) {
+        try (DatagramSocket datagramSocketResult = new DatagramSocket()) {
+            var bytes = mapper.writeValueAsBytes(sleepingResult);
+            DatagramPacket packet = new DatagramPacket(bytes, bytes.length,
+                    InetAddress.getByAddress(address.getAddress()), port);
+            datagramSocketResult.send(packet);
+        } catch (IOException e) {
+        }
+    }
+}
