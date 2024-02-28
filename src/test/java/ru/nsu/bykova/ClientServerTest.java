@@ -70,16 +70,16 @@ class ClientServerTest {
     @ParameterizedTest
     @MethodSource("provideArguments")
     void manyTasksTest(SleepingBoss boss, SleepingWorker worker) {
-        final int nThreads = 5;
-        final int nTasks = 10;
+        final int threadCount = 5;
+        final int taskCount = 10;
         try {
             Thread serverThread =
                     new Thread(
                             () -> {
-                                (new SleepingComputationalNode()).calculate(nThreads, boss);
+                                (new SleepingComputationalNode()).calculate(threadCount, boss);
                             });
             serverThread.start();
-            for (int i = 0; i < nTasks; ++i) {
+            for (int i = 0; i < taskCount; ++i) {
                 SleepingResult result =
                         worker.Work(new SleepingTask(100, new int[] {0, 1, 2, 3, 4, 5, 6, 7}));
                 Assertions.assertTrue(result.result);
