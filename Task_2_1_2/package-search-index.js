@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ru.nsu.bykova"},{"l":"ru.nsu.bykova.data"},{"l":"ru.nsu.bykova.tcp"},{"l":"ru.nsu.bykova.udp"}];updateSearchResults();
