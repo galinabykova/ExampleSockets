@@ -1,19 +1,17 @@
 package ru.nsu.bykova;
 
+import java.io.IOException;
+import java.util.stream.Stream;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-
 import ru.nsu.bykova.data.SleepingResult;
 import ru.nsu.bykova.data.SleepingTask;
 import ru.nsu.bykova.tcp.TcpSleepingBoss;
 import ru.nsu.bykova.tcp.TcpSleepingWorker;
 import ru.nsu.bykova.udp.UdpSleepingBoss;
 import ru.nsu.bykova.udp.UdpSleepingWorker;
-
-import java.io.IOException;
-import java.util.stream.Stream;
 
 class ClientServerTest {
     static final int PORT = 12345;

@@ -3,13 +3,12 @@ package ru.nsu.bykova.udp;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ru.nsu.bykova.data.SleepingResult;
-import ru.nsu.bykova.SleepingCourier;
-
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import ru.nsu.bykova.SleepingCourier;
+import ru.nsu.bykova.data.SleepingResult;
 
 public class UdpSleepingCourier implements SleepingCourier {
     final ObjectMapper mapper;

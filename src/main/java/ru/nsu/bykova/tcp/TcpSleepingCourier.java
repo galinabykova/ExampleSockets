@@ -30,7 +30,7 @@ public class TcpSleepingCourier implements SleepingCourier {
             mapper.writeValue(out, result);
         } catch (IOException e) {
             e.printStackTrace();
-        } finally{
+        } finally {
             try {
                 clientSocket.close();
             } catch (IOException e) {

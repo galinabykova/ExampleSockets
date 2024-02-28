@@ -1,15 +1,13 @@
 package ru.nsu.bykova;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
-
-import ru.nsu.bykova.data.SleepingResult;
-import ru.nsu.bykova.data.SleepingTask;
-
 import java.io.IOException;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+import ru.nsu.bykova.data.SleepingResult;
+import ru.nsu.bykova.data.SleepingTask;
 
 class SleepingComputationalNodeTest {
     // Чтобы протестировать класс SleepingComputationalNode,
