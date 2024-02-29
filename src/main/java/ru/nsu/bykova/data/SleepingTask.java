@@ -16,7 +16,7 @@ public class SleepingTask {
      *
      * @param sleepingTime время сна
      * @param array массив, по которому рассчитывается задача
-     * @throws IllegalArgumentException если sleepingTime < 0
+     * @throws IllegalArgumentException если sleepingTime меньше 0
      */
     public SleepingTask(long sleepingTime, int[] array) throws IllegalArgumentException {
         if (sleepingTime < 0) {

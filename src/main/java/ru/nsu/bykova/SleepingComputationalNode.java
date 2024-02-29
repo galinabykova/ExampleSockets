@@ -11,10 +11,10 @@ import ru.nsu.bykova.data.SleepingResult;
  */
 public class SleepingComputationalNode {
     /**
-     * Дожидается новой задачи и отправляет её в пул.
+     * дожидается новой задачи и отправляет её в пул
      *
      * @param threadCount число потоков
-     * @param sleepingBoss выдаёт задачи
+     * @param sleepingBoss
      */
     public void calculate(int threadCount, SleepingBoss sleepingBoss) {
         if (threadCount < 0) {
