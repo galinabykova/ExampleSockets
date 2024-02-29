@@ -91,12 +91,18 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
+<dt>Record Components:</dt>
+<dd><code><span id="param-task">task</span></code> - задача</dd>
+<dd><code><span id="param-courier">courier</span></code> - тот, кто должен будет отправить/сохранить результат.</dd>
+</dl>
+<dl class="notes">
 <dt>Enclosing interface:</dt>
 <dd><code><a href="SleepingBoss.html" title="interface in ru.nsu.bykova">SleepingBoss</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public static record </span><span class="element-name type-name-label">SleepingBoss.Package</span>(<a href="data/SleepingTask.html" title="class in ru.nsu.bykova.data">SleepingTask</a>&nbsp;task, <a href="SleepingCourier.html" title="interface in ru.nsu.bykova">SleepingCourier</a>&nbsp;courier)
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Record.html" title="class or interface in java.lang" class="external-link">Record</a></span></div>
+<div class="block">Пара, которую должен возвращает объект, реализующий интерфейс SleepingBoss.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -130,7 +136,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SleepingCourier.html" title="interface in ru.nsu.bykova">SleepingCourier</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#courier()" class="member-name-link">courier</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>courier</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-courier"><code>courier</code></a> record component.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;o)</code></div>
@@ -145,7 +151,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="data/SleepingTask.html" title="class in ru.nsu.bykova.data">SleepingTask</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#task()" class="member-name-link">task</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of the <code>task</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-task"><code>task</code></a> record component.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
@@ -177,8 +183,8 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates an instance of a <code>Package</code> record class.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>task</code> - the value for the <code>task</code> record component</dd>
-<dd><code>courier</code> - the value for the <code>courier</code> record component</dd>
+<dd><code>task</code> - the value for the <a href="#param-task"><code>task</code></a> record component</dd>
+<dd><code>courier</code> - the value for the <a href="#param-courier"><code>courier</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -235,10 +241,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="task()">
 <h3>task</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="data/SleepingTask.html" title="class in ru.nsu.bykova.data">SleepingTask</a></span>&nbsp;<span class="element-name">task</span>()</div>
-<div class="block">Returns the value of the <code>task</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-task"><code>task</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>task</code> record component</dd>
+<dd>the value of the <a href="#param-task"><code>task</code></a> record component</dd>
 </dl>
 </section>
 </li>
@@ -246,10 +252,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="courier()">
 <h3>courier</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SleepingCourier.html" title="interface in ru.nsu.bykova">SleepingCourier</a></span>&nbsp;<span class="element-name">courier</span>()</div>
-<div class="block">Returns the value of the <code>courier</code> record component.</div>
+<div class="block">Returns the value of the <a href="#param-courier"><code>courier</code></a> record component.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the value of the <code>courier</code> record component</dd>
+<dd>the value of the <a href="#param-courier"><code>courier</code></a> record component</dd>
 </dl>
 </section>
 </li>
