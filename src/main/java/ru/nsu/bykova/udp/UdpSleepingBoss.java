@@ -23,7 +23,7 @@ public class UdpSleepingBoss implements SleepingBoss {
 
     /**
      * @param port порт, на котором будем ждать исключений.
-     * @throws IOException, если порт занят.
+     * @throws IOException если порт занят.
      */
     public UdpSleepingBoss(int port) throws IOException {
         datagramSocket = new DatagramSocket(port);

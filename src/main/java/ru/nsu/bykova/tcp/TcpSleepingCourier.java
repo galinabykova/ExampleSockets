@@ -17,6 +17,9 @@ public class TcpSleepingCourier implements SleepingCourier {
     private final ObjectMapper mapper;
     private Socket clientSocket;
 
+    /**
+     * @param socket по которому отправим результат.
+     */
     public TcpSleepingCourier(Socket socket) {
         clientSocket = socket;
         mapper = new ObjectMapper();
