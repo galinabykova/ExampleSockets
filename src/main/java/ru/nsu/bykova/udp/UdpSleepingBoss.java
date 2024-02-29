@@ -4,7 +4,8 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
-import java.net.*;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
 import java.util.Optional;
 import ru.nsu.bykova.SleepingBoss;
 import ru.nsu.bykova.data.SleepingTask;
@@ -16,10 +17,14 @@ public class UdpSleepingBoss implements SleepingBoss {
     // мы не будет думать о том, что будет, если объект не влезет в один пакет
     // потому что вы можете организовать код так, чтобы вам не надо было
     // об этом думать
-    final static int PACKET_LIMIT = 65507;
+    static final int PACKET_LIMIT = 65507;
     final ObjectMapper mapper;
     DatagramSocket datagramSocket;
 
+    /**
+     * @param port порт, на котором будем ждать исключений.
+     * @throws IOException, если порт занят.
+     */
     public UdpSleepingBoss(int port) throws IOException {
         datagramSocket = new DatagramSocket(port);
         mapper = new ObjectMapper();

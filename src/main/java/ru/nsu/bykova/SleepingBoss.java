@@ -8,6 +8,10 @@ import ru.nsu.bykova.data.SleepingTask;
 Выдаёт задачи.
  */
 public interface SleepingBoss extends Closeable {
+    /**
+     * Выдаёт следующую задачу. Может блокироваться до поступления новых задач.
+     * @return следующую задачу. Возвращает empty, если задач больше нет.
+     */
     Optional<Package> getSleepingTask();
 
     /**
