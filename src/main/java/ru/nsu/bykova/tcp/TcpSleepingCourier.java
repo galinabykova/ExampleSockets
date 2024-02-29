@@ -40,6 +40,7 @@ public class TcpSleepingCourier implements SleepingCourier {
             try {
                 clientSocket.close();
             } catch (IOException e) {
+                e.printStackTrace();
             }
         }
     }

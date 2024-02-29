@@ -6,7 +6,7 @@ import ru.nsu.bykova.data.SleepingTask;
 
 public class SleepingTaskTest {
     @Test
-    void SleepingTimeLessZero() {
+    void sleepingTimeLessZero() {
         final int[] array = new int[]{1};
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> {new SleepingTask(-1L, array);});

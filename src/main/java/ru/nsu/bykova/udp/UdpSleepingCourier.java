@@ -44,6 +44,7 @@ public class UdpSleepingCourier implements SleepingCourier {
                             port);
             datagramSocketResult.send(packet);
         } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

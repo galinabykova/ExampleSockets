@@ -10,8 +10,8 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Optional;
-import ru.nsu.bykova.data.SleepingTask;
 import ru.nsu.bykova.SleepingBoss;
+import ru.nsu.bykova.data.SleepingTask;
 
 /**
 Принимает задачи от клиентов через протокол TCP.

@@ -26,7 +26,6 @@ public class TcpSleepingWorker implements SleepingWorker {
      *
      * @param address сервера, который будет считать задачу
      * @param port сервера, который будет считать задачу
-     * @throws IOException
      */
     public TcpSleepingWorker(String address, int port) {
         this.address = address;
