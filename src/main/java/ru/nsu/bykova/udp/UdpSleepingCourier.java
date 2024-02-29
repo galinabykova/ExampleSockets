@@ -14,10 +14,16 @@ import ru.nsu.bykova.data.SleepingResult;
 Передаёт результат расчётов через UDP.
  */
 public class UdpSleepingCourier implements SleepingCourier {
-    final ObjectMapper mapper;
-    InetAddress address;
-    int port;
+    private final ObjectMapper mapper;
+    private InetAddress address;
+    private int port;
 
+    /**
+     * конструктор
+     *
+     * @param address адрес, куда отправить результат
+     * @param port порт, куда отправить результат
+     */
     public UdpSleepingCourier(InetAddress address, int port) {
         this.address = address;
         this.port = port;

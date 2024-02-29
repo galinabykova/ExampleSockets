@@ -16,11 +16,17 @@ import ru.nsu.bykova.data.SleepingTask;
 Передаёт задачу на расчёт серверу и получает результат через UDP.
  */
 public class UdpSleepingWorker implements SleepingWorker {
-    final ObjectMapper mapper;
-    String address;
-    int port;
+    private final ObjectMapper mapper;
+    private String address;
+    private int port;
 
-    public UdpSleepingWorker(String address, int port) throws IOException {
+    /**
+     * конструктор
+     *
+     * @param address адрес сервера для расчёта
+     * @param port порт сервера для расчёта
+     */
+    public UdpSleepingWorker(String address, int port) {
         this.address = address;
         this.port = port;
         mapper = new ObjectMapper();

@@ -10,6 +10,12 @@ import ru.nsu.bykova.data.SleepingResult;
 Распределяет задачи между потоками.
  */
 public class SleepingComputationalNode {
+    /**
+     * Дожидается новой задачи и отправляет её в пул.
+     *
+     * @param threadCount число потоков
+     * @param sleepingBoss выдаёт задачи
+     */
     public void calculate(int threadCount, SleepingBoss sleepingBoss) {
         if (threadCount < 0) {
             throw new IllegalArgumentException("thread count < 0");

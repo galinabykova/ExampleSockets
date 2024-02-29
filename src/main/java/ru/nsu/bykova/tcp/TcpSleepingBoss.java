@@ -20,6 +20,12 @@ public class TcpSleepingBoss implements SleepingBoss {
     private final ServerSocket serverSocket;
     private final ObjectMapper mapper;
 
+    /**
+     * конструктор
+     *
+     * @param port на котором будет ждать клиентов
+     * @throws IOException если порт занят
+     */
     public TcpSleepingBoss(int port) throws IOException {
         serverSocket = new ServerSocket(port);
         mapper = new ObjectMapper();
