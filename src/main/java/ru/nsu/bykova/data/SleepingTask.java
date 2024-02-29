@@ -1,6 +1,6 @@
 package ru.nsu.bykova.data;
 
-/*
+/**
 Информация, необходимая для расчёта одной задачи.
  */
 public class SleepingTask {

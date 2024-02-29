@@ -1,6 +1,6 @@
 package ru.nsu.bykova.data;
 
-/*
+/**
 Результат вычислений.
  */
 public class SleepingResult {

@@ -12,7 +12,7 @@ import ru.nsu.bykova.SleepingWorker;
 import ru.nsu.bykova.data.SleepingResult;
 import ru.nsu.bykova.data.SleepingTask;
 
-/*
+/**
 Передаёт задачу на расчёт серверу и получает результат через UDP.
  */
 public class UdpSleepingWorker implements SleepingWorker {

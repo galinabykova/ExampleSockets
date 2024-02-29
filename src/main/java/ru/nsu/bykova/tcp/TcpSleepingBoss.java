@@ -13,7 +13,7 @@ import java.util.Optional;
 import ru.nsu.bykova.data.SleepingTask;
 import ru.nsu.bykova.SleepingBoss;
 
-/*
+/**
 Принимает задачи от клиентов через протокол TCP.
  */
 public class TcpSleepingBoss implements SleepingBoss {

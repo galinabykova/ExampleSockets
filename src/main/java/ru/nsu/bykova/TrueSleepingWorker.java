@@ -3,7 +3,7 @@ package ru.nsu.bykova;
 import ru.nsu.bykova.data.SleepingResult;
 import ru.nsu.bykova.data.SleepingTask;
 
-/*
+/**
 Вычисляет задачу там, где его вызывают.
  */
 public class TrueSleepingWorker implements SleepingWorker {
