@@ -9,6 +9,6 @@ public class SleepingTaskTest {
     void sleepingTimeLessZero() {
         final int[] array = new int[]{1};
         Assertions.assertThrows(IllegalArgumentException.class,
-                () -> {new SleepingTask(-1L, array);});
+                () -> new SleepingTask(-1L, array));
     }
 }
