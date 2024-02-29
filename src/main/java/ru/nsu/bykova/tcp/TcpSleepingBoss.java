@@ -21,7 +21,7 @@ public class TcpSleepingBoss implements SleepingBoss {
     private final ObjectMapper mapper;
 
     /**
-     * конструктор
+     * Конструктор.
      *
      * @param port на котором будет ждать клиентов
      * @throws IOException если порт занят

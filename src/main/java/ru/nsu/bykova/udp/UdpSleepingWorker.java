@@ -21,7 +21,7 @@ public class UdpSleepingWorker implements SleepingWorker {
     private int port;
 
     /**
-     * конструктор
+     * Конструктор.
      *
      * @param address адрес сервера для расчёта
      * @param port порт сервера для расчёта

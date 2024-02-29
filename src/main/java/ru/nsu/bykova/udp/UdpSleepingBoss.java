@@ -22,7 +22,7 @@ public class UdpSleepingBoss implements SleepingBoss {
     DatagramSocket datagramSocket;
 
     /**
-     * конструктор
+     * Конструктор.
      *
      * @param port порт, на котором будем ждать исключений.
      * @throws IOException если порт занят.

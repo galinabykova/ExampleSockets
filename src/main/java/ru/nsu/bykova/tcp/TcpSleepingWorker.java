@@ -22,7 +22,7 @@ public class TcpSleepingWorker implements SleepingWorker {
     private int port;
 
     /**
-     * конструктор
+     * Конструктор.
      *
      * @param address сервера, который будет считать задачу
      * @param port сервера, который будет считать задачу

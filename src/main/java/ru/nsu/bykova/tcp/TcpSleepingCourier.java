@@ -18,6 +18,8 @@ public class TcpSleepingCourier implements SleepingCourier {
     private Socket clientSocket;
 
     /**
+     * Конструктор.
+     *
      * @param socket по которому отправим результат.
      */
     public TcpSleepingCourier(Socket socket) {

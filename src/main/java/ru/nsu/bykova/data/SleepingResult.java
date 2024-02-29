@@ -10,6 +10,11 @@ public class SleepingResult {
 
     public SleepingResult() {}
 
+    /**
+     * Конструктор.
+     *
+     * @param result результат
+     */
     public SleepingResult(boolean result) {
         this.result = result;
     }

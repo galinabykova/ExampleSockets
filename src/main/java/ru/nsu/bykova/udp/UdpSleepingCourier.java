@@ -19,7 +19,7 @@ public class UdpSleepingCourier implements SleepingCourier {
     private int port;
 
     /**
-     * конструктор
+     * Конструктор.
      *
      * @param address адрес, куда отправить результат
      * @param port порт, куда отправить результат
