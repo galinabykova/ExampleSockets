@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.nsu.bykova.data.SleepingTask;
 
+/**
+ * Тест для SleepingTask.
+ */
 public class SleepingTaskTest {
     @Test
     void sleepingTimeLessZero() {

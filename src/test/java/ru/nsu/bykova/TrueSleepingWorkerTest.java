@@ -5,6 +5,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.nsu.bykova.data.SleepingTask;
 
+/**
+ * Тесты для TrueSleepingWorker.
+ */
 class TrueSleepingWorkerTest {
     private TrueSleepingWorker trueSleepingWorker;
 

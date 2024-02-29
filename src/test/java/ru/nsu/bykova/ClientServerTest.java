@@ -13,6 +13,9 @@ import ru.nsu.bykova.tcp.TcpSleepingWorker;
 import ru.nsu.bykova.udp.UdpSleepingBoss;
 import ru.nsu.bykova.udp.UdpSleepingWorker;
 
+/**
+ * Тесты для проверки сетевого взаимодействия.
+ */
 class ClientServerTest {
     static final int PORT = 12345;
 

@@ -9,6 +9,9 @@ import org.junit.jupiter.params.provider.ValueSource;
 import ru.nsu.bykova.data.SleepingResult;
 import ru.nsu.bykova.data.SleepingTask;
 
+/**
+ * Тесты для SleepingComputationalNode.
+ */
 class SleepingComputationalNodeTest {
     // Чтобы протестировать класс SleepingComputationalNode,
     // мне нужно множество сущностей: SleepingBoss, Address, Worker.
