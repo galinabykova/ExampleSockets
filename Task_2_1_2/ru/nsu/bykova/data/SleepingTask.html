@@ -125,7 +125,9 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(long,int%5B%5D)" class="member-name-link">SleepingTask</a><wbr>(long&nbsp;sleepingTime,
  int[]&nbsp;array)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Конструктор.</div>
+</div>
 </div>
 </section>
 </li>
@@ -179,9 +181,13 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SleepingTask</span><wbr><span class="parameters">(long&nbsp;sleepingTime,
  int[]&nbsp;array)</span>
              throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
+<div class="block">Конструктор.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>sleepingTime</code> - время сна</dd>
+<dd><code>array</code> - массив, по которому рассчитывается задача</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - если sleepingTime меньше 0</dd>
 </dl>
 </section>
 </li>
