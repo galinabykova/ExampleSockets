@@ -10,9 +10,12 @@ import java.net.Socket;
 import ru.nsu.bykova.SleepingCourier;
 import ru.nsu.bykova.data.SleepingResult;
 
+/*
+Передаёт результат расчётов через TCP.
+ */
 public class TcpSleepingCourier implements SleepingCourier {
     private final ObjectMapper mapper;
-    Socket clientSocket;
+    private Socket clientSocket;
 
     public TcpSleepingCourier(Socket socket) {
         clientSocket = socket;

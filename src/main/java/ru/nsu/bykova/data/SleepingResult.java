@@ -1,5 +1,8 @@
 package ru.nsu.bykova.data;
 
+/*
+Результат вычислений.
+ */
 public class SleepingResult {
     // тут публичные поля, чтобы можно было сериализовать в JSON
     // с помощью библиотеки

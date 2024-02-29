@@ -9,6 +9,9 @@ import java.util.Optional;
 import ru.nsu.bykova.SleepingBoss;
 import ru.nsu.bykova.data.SleepingTask;
 
+/*
+Принимает задачи от клиентов через протокол UDP.
+ */
 public class UdpSleepingBoss implements SleepingBoss {
     // мы не будет думать о том, что будет, если объект не влезет в один пакет
     // потому что вы можете организовать код так, чтобы вам не надо было

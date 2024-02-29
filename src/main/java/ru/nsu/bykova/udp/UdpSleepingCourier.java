@@ -10,6 +10,9 @@ import java.net.InetAddress;
 import ru.nsu.bykova.SleepingCourier;
 import ru.nsu.bykova.data.SleepingResult;
 
+/*
+Передаёт результат расчётов через UDP.
+ */
 public class UdpSleepingCourier implements SleepingCourier {
     final ObjectMapper mapper;
     InetAddress address;

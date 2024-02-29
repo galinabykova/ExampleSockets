@@ -4,6 +4,9 @@ import java.io.Closeable;
 import java.util.Optional;
 import ru.nsu.bykova.data.SleepingTask;
 
+/*
+Выдаёт задачи.
+ */
 public interface SleepingBoss extends Closeable {
     Optional<Package> getSleepingTask();
 

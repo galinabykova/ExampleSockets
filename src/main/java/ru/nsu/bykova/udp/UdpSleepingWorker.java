@@ -12,6 +12,9 @@ import ru.nsu.bykova.SleepingWorker;
 import ru.nsu.bykova.data.SleepingResult;
 import ru.nsu.bykova.data.SleepingTask;
 
+/*
+Передаёт задачу на расчёт серверу и получает результат через UDP.
+ */
 public class UdpSleepingWorker implements SleepingWorker {
     final ObjectMapper mapper;
     String address;
@@ -39,6 +42,10 @@ public class UdpSleepingWorker implements SleepingWorker {
             var resultA = mapper.readValue(pack.getData(), SleepingResult.class);
             return resultA;
         } catch (SocketTimeoutException e) {
+            // Вот тут есть неприятная деталь: если сервер будет считать задачу
+            // слишком долго, мы попадём сюда и не получим результат.
+            // Если будете использовать UDP для отправки задач (без этого можно обойтись)
+            // Нужно будет чего-то отправлять клиенту, чтобы он знал, что сервер жив.
             throw e;
         } catch (IOException e) {
             e.printStackTrace();

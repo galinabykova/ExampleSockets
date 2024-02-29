@@ -6,6 +6,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import ru.nsu.bykova.data.SleepingResult;
 
+/*
+Распределяет задачи между потоками.
+ */
 public class SleepingComputationalNode {
     public void calculate(int threadCount, SleepingBoss sleepingBoss) {
         if (threadCount < 0) {

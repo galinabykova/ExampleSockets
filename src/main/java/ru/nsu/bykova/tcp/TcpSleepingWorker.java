@@ -14,9 +14,12 @@ import ru.nsu.bykova.SleepingWorker;
 import ru.nsu.bykova.data.SleepingResult;
 import ru.nsu.bykova.data.SleepingTask;
 
+/*
+Передаёт задачу на расчёт серверу и получает результат через TCP.
+ */
 public class TcpSleepingWorker implements SleepingWorker {
-    String address;
-    int port;
+    private String address;
+    private int port;
 
     public TcpSleepingWorker(String address, int port) throws IOException {
         this.address = address;
