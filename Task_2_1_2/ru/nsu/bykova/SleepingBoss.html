@@ -130,7 +130,9 @@ extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/ja
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a><wbr>&lt;<a href="SleepingBoss.Package.html" title="class in ru.nsu.bykova">SleepingBoss.Package</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSleepingTask()" class="member-name-link">getSleepingTask</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Выдаёт следующую задачу.</div>
+</div>
 </div>
 </div>
 </div>
@@ -152,6 +154,11 @@ extends <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/ja
 <section class="detail" id="getSleepingTask()">
 <h3>getSleepingTask</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link">Optional</a>&lt;<a href="SleepingBoss.Package.html" title="class in ru.nsu.bykova">SleepingBoss.Package</a>&gt;</span>&nbsp;<span class="element-name">getSleepingTask</span>()</div>
+<div class="block">Выдаёт следующую задачу. Может блокироваться до поступления новых задач.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>следующую задачу. Возвращает empty, если задач больше нет.</dd>
+</dl>
 </section>
 </li>
 </ul>
